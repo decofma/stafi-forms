@@ -36,7 +36,7 @@ const TaskForm = () => {
             name="name"
             value={task.name}
             onChange={handleChange}
-            className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+            className="pl-2 mt-2 block w-2/4 shadow-md sm:text-sm border-gray-300 rounded-md"
           />
         </div>
         <div>
@@ -46,16 +46,16 @@ const TaskForm = () => {
             name="dueDate"
             value={task.dueDate}
             onChange={handleChange}
-            className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+            className="pl-2 mt-2 block w-1/4 shadow-md sm:text-sm border-gray-300 rounded-md"
           />
         </div>
-        <div>
+        <div>   
           <label className="block text-sm font-medium text-gray-700">Priority</label>
           <select
             name="priority"
             value={task.priority}
             onChange={handleChange}
-            className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+            className="pl-2 mt-2 block w-2/4 shadow-md sm:text-sm border-gray-300 rounded-md"
           >
             <option value="">Select Priority</option>
             <option value="High">High</option>

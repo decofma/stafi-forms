@@ -34,7 +34,7 @@ const UserForm = () => {
           name="name"
           value={user.name}
           onChange={handleChange}
-          className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+          className="pl-2 mt-2 block w-full shadow-md sm:text-sm border-gray-300 rounded-md"
         />
       </div>
       <div>
@@ -44,7 +44,7 @@ const UserForm = () => {
           name="email"
           value={user.email}
           onChange={handleChange}
-          className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+          className="pl-2 mt-2 block w-full shadow-md sm:text-sm border-gray-300 rounded-md"
         />
       </div>
       <div>
@@ -54,7 +54,7 @@ const UserForm = () => {
           name="address"
           value={user.address}
           onChange={handleChange}
-          className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+          className="pl-2 mt-2 block w-full shadow-md sm:text-sm border-gray-300 rounded-md"
         />
       </div>
     </form>
