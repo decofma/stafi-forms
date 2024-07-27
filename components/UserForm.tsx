@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
 import { useUserContext } from '../contexts/UserContext';
 
-const UserForm = () => {
+const UserForm: React.FC = () => {
   const { user, setUser } = useUserContext();
 
   useEffect(() => {
+
     const fetchRandomUser = async () => {
       const response = await fetch('https://randomuser.me/api/');
       const data = await response.json();
       const randomUser = data.results[0];
       setUser({
+        id:randomUser.id.value,
         name: `${randomUser.name.first} ${randomUser.name.last}`,
         email: randomUser.email,
         address: `${randomUser.location.street.name}, ${randomUser.location.city}`,
@@ -21,8 +23,10 @@ const UserForm = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    // @ts-ignore prevUser does exist is User
-    setUser((prevUser: any) => ({ ...prevUser, [name]: value }));
+    setUser((prevUser) => ({
+      ...prevUser,
+      [name]: value,
+    }));
   };
 
   return (

@@ -1,6 +1,17 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import { UserProvider } from '../contexts/UserContext';
+import { TaskProvider } from '../contexts/TaskContext';
+import React from 'react';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+  return (
+    <UserProvider>
+      <TaskProvider>
+        <Component {...pageProps} />
+      </TaskProvider>
+    </UserProvider>
+  );
+};
+
+export default MyApp;
