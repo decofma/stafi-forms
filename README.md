@@ -19,8 +19,8 @@ Para configurar e rodar o projeto localmente, siga estas etapas:
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
-    cd seu-repositorio
+    git clone https://github.com/decofma/stafi-forms/.git
+    cd stafi-forms/
     ```
 
 2. Instale as dependências:
