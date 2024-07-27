@@ -14,7 +14,6 @@ const TaskForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Verificação se todos os campos estão preenchidos
     if (!task.name || !task.dueDate || !task.priority) {
       setError('Please fill in all fields');
       return;
